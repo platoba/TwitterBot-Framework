@@ -1,5 +1,71 @@
 # Changelog
 
+## v7.0.0 (2026-03-01)
+
+### 🚀 New Modules
+
+- **Thread Monetizer** (`bot/thread_monetizer.py`): 病毒式推文变现引擎
+  - CTAConfig: 8种CTA类型 (newsletter/product/affiliate/lead_magnet/course/service/donation/link) + 5种插入位置
+  - ViralDetector: 6级病毒阶段分类 (dormant→warming→trending→viral→peak→declining) + 速度追踪(每小时互动增量) + 病毒评分0-100
+  - CTAOptimizer: 性能追踪 + A/B测试胜出判定 + 最佳位置识别 + CTA文案模板生成器(每类型3+模板)
+  - ThreadMetrics: 线程指标追踪 (总点赞/转推/回复/曝光/书签 + 互动率 + 速度 + 峰值小时 + 变现状态)
+  - ConversionEvent: 转化追踪 (点击/转化/收入 + 货币/来源/时间戳)
+  - MonetizationStore: SQLite持久化 (CTA配置/线程指标/转化记录/每日收入汇总 + 4张表11索引)
+  - ThreadMonetizer: 完整变现编排 (创建CTA→监测病毒潜力→智能插入→追踪收入→ROI报告)
+  - 收入摘要: 总收入/日均/点击/转化/转化率/变现线程数/活跃CTA数 + Top收入线程排行
+  - 161个测试 (+161) 覆盖7个类
+
+- **Account Security Monitor** (`bot/account_security.py`): 账号安全监控系统
+  - APIKeyInfo: API密钥生命周期管理 (创建/过期/轮转追踪 + SHA256哈希存储 + 权限列表 + 5种状态)
+  - AnomalyDetector: 登录异常检测 (IP变更/地理不可能旅行/暴力破解5+失败/异常时段2-5am + 风险评分0-100)
+  - RateLimitForensics: 限流取证分析 (端点级统计 + 3种滥用模式high_usage/frequent_429/burst + 优化建议缓存/排队/退避)
+  - TokenLeakScanner: 密钥泄露扫描 (6种正则模式Twitter Bearer/JWT/环境变量/通用token/Base64 secret + 文件扫描)
+  - SecurityAlert: 10种告警类型 (login_anomaly/api_key_expired/rate_limit_abuse/ip_change/geo_impossible/brute_force等 + 5级威胁)
+  - SecurityStore: SQLite安全数据 (API密钥/登录事件/告警 + 统计查询30天登录/成功率/失败率/唯一IP/国家数/平均风险)
+  - AccountSecurityMonitor: 统一编排 (密钥注册→登录追踪→告警触发→限流监控→泄露扫描→安全评分A+-F)
+  - 安全评分算法: 密钥健康(-20危急/-10高/-5中) + 登录风险(-20高/-10中) + 未解决告警(-15危急/-5高) + 限流滥用(-3/模式)
+  - 131个测试 (+131) 覆盖8个类
+
+- **Cross-Platform Posting Engine** (`bot/crosspost_engine.py`): 跨平台发布引擎
+  - 5平台支持: Twitter/LinkedIn/Threads/Mastodon/Bluesky + 平台特性差异表(字符限制/线程支持/媒体数/投票/Alt-text)
+  - ContentAdapter: 智能内容适配 (Twitter 280→LinkedIn 3000专业化→Threads 500休闲化→Mastodon CamelCase标签→Bluesky 300短小精悍)
+  - 6种适配策略: 专业化professionalize(imo→in my opinion) + 休闲化casualize + Markdown剥离 + 提及转换 + 智能截断(句子/词边界) + 线程拆分/合并
+  - 线程处理: 自动拆分(超长→多条+编号1/N) + 合并(不支持线程平台→单条) + 标签优化(LinkedIn 3-5个/Bluesky 3个/Mastodon CamelCase)
+  - MediaAttachment: 媒体文件模型 (路径/类型image|video|gif/Alt文本/尺寸) + 平台限制自动裁剪(Twitter 4/LinkedIn 20)
+  - CrossPost: 跨平台发布记录 (源ID/目标平台/内容/线程部分/标签/链接/状态draft|published|failed/平台post_id/错误日志)
+  - CrossPostStore: SQLite持久化 (源内容/跨平台发布/平台分析/平台配置 + 4张表6索引)
+  - 平台性能对比: 点赞/分享/评论/曝光/点击/平均互动率 + 30天汇总 + 🥇🥈🥉奖牌排名 + 最佳平台自动判定
+  - 124个测试 (+124) 覆盖4个类 + 完整集成测试流
+
+### 📊 Test Coverage
+
+- **Total Tests**: 2492 (+416)
+  - Thread Monetizer: 161 tests (7 classes)
+  - Account Security: 131 tests (8 classes)
+  - Cross-Post Engine: 124 tests (4 classes)
+- **All Passing**: ✅ 2492/2492
+- **New Test Files**: 3
+  - `tests/test_thread_monetizer.py`
+  - `tests/test_account_security.py`
+  - `tests/test_crosspost_engine.py`
+
+### 📈 Code Metrics
+
+- **New Lines**: +3,197 (3 modules + 3 test files)
+  - `bot/thread_monetizer.py`: 1,074 lines (32KB)
+  - `bot/account_security.py`: 1,159 lines (35KB)
+  - `bot/crosspost_engine.py`: 964 lines (29KB)
+- **Total Python Files**: 64 modules + 63 test files = 127
+- **Total Lines**: 59,098 (+3,197)
+
+### 🎯 Impact
+
+- **Monetization**: 将病毒推文直接转化为收入(联盟营销/课程/产品/Newsletter订阅/服务咨询)
+- **Security**: 企业级账号安全防护(API密钥轮转/登录异常/限流优化/密钥泄露扫描)
+- **Distribution**: 一键跨5大平台分发(Twitter→LinkedIn/Threads/Mastodon/Bluesky自动适配)
+
+---
+
 ## v6.0.0 (2026-03-01)
 
 ### 🚀 New Modules
