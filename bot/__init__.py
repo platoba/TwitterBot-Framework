@@ -1,7 +1,8 @@
 """
-TwitterBot Framework v4.0
+TwitterBot Framework v7.0
 策略引擎 + 多账号管理 + 媒体库 + 规则互动 + 分析面板 + Webhook + 限流保护
 + Spaces管理 + 投票引擎 + 引用推文策略 + AB测试 + 增长引擎 + 高级队列
++ 受众洞察 + 内容审核 + 链接情报 + 线程分析 + 智能调度 + 竞品对标
 """
 
-__version__ = "4.0.0"
+__version__ = "7.0.0"
