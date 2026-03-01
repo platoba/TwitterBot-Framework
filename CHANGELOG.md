@@ -1,5 +1,47 @@
 # Changelog
 
+## v6.0.0 (2026-03-01)
+
+### 🚀 New Modules
+
+- **Audience Lookalike** (`bot/audience_lookalike.py`): 受众Lookalike发现引擎
+  - UserProfile: 用户画像数据模型 (粉丝/互动率/兴趣标签/来源追踪)
+  - InterestExtractor: 7大兴趣分类自动提取 (tech/marketing/ecommerce/finance/design/creator/business) + 相似度计算
+  - SimilarityCalculator: 4种相似度算法 (Jaccard/Cosine/Overlap/Dice)
+  - LookalikeStore: SQLite持久化 (种子账号/发现用户/重叠缓存 + 索引)
+  - AudienceLookalike: 完整发现引擎 (种子粉丝收集→多维评分→5分段分类→行动推荐→Bot过滤)
+  - 5种受众分段: HIGH_VALUE/WARM_LEAD/COLD_LEAD/COMPETITOR_FAN/INDUSTRY_PEER
+  - 粉丝重叠分析: 两两种子账号Jaccard/重叠比/独占用户
+  - JSON/CSV导出 + 分段摘要统计
+
+- **Content Moderation** (`bot/content_moderation.py`): 内容安全审核管道
+  - ToxicityDetector: 4级毒性检测 (CRITICAL/HIGH/MEDIUM/LOW) + 正则模式库
+  - PIIDetector: 8类PII识别 (email/phone_us/phone_cn/SSN/credit_card/IP/passport/ID_card_cn) + 自动脱敏redact
+  - BrandSafetyChecker: 3级品牌安全关键词 + 自定义词表扩展
+  - SpamDetector: 7种垃圾指标 (hashtag泛滥/大写轰炸/金钱诱饵/URL洪水/关注乞求/DM诱骗/重复字符)
+  - PlatformComplianceChecker: Twitter/X平台合规 (280字符/hashtag/mention上限)
+  - LinkSafetyChecker: 可疑TLD检测 + 钓鱼URL模式匹配
+  - ModerationStore: SQLite审核日志 + 每日统计 (approval_rate)
+  - ContentModerator: 统一审核管道 (6检测器→风险评分→自动拒绝/修复→日志)
+
+- **Link Intelligence** (`bot/link_intelligence.py`): 链接智能管理引擎
+  - UTMParams: UTM参数模型 + URL提取 + Twitter默认
+  - UTMBuilder: URL构建 (添加UTM) + 清除UTM + 参数验证
+  - ShortCodeGenerator: 62字符随机短码 + 种子确定性 + URL哈希 + 格式校验
+  - LinkStore: SQLite持久化 (链接/点击事件/分组 + 索引) + 聚合分析
+  - TrackedLink: 追踪链接模型 (短码/UTM/点击/状态/标签/过期)
+  - LinkIntelligence: 完整引擎 (创建追踪链接→记录点击→设备/平台检测→过期检查→Campaign报告)
+  - 批量创建 + 文本链接替换 + JSON/CSV导出
+
+### 📊 Testing
+
+- 新增 168 个测试 (3个测试文件)
+  - `tests/test_audience_lookalike.py`: 61 tests
+  - `tests/test_content_moderation.py`: 53 tests
+  - `tests/test_link_intelligence.py`: 54 tests
+- 总测试数: **2076** (1908 → 2076)
+- 全部通过 ✅
+
 ## v5.0.0 (2026-03-01)
 
 ### 🚀 New Modules
