@@ -33,13 +33,23 @@ class AnalyticsStrategy:
             tweets = self.db.get_tweet_history(username, limit=50)
 
         if not tweets:
-            return {"engagement_rate": 0, "total_tweets": 0}
+            return {
+                "engagement_rate": 0, "total_tweets": 0,
+                "total_likes": 0, "total_retweets": 0,
+                "total_replies": 0, "total_quotes": 0,
+                "total_impressions": 0,
+                "avg_likes": 0, "avg_retweets": 0, "avg_replies": 0,
+            }
 
-        total_likes = sum(t.get("like_count", 0) for t in tweets)
-        total_retweets = sum(t.get("retweet_count", 0) for t in tweets)
-        total_replies = sum(t.get("reply_count", 0) for t in tweets)
-        total_quotes = sum(t.get("quote_count", 0) for t in tweets)
-        total_impressions = sum(t.get("impression_count", 0) for t in tweets)
+        def _metric(t, key):
+            """Extract metric from flat or nested public_metrics."""
+            return t.get(key, 0) or t.get("public_metrics", {}).get(key, 0)
+
+        total_likes = sum(_metric(t, "like_count") for t in tweets)
+        total_retweets = sum(_metric(t, "retweet_count") for t in tweets)
+        total_replies = sum(_metric(t, "reply_count") for t in tweets)
+        total_quotes = sum(_metric(t, "quote_count") for t in tweets)
+        total_impressions = sum(_metric(t, "impression_count") for t in tweets)
 
         total_engagement = total_likes + total_retweets + total_replies + total_quotes
         count = len(tweets)
