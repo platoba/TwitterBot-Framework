@@ -3,9 +3,8 @@ tests/test_dm_manager.py - DM Manager 完整测试
 """
 
 import pytest
-import time
 from bot.dm_manager import (
-    DMManager, DMTemplate, DMMessage, DMStatus, DMTrigger,
+    DMManager, DMTemplate, DMStatus, DMTrigger,
     AutoReplyEngine, RateLimitedSender, Conversation,
 )
 

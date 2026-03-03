@@ -5,13 +5,11 @@ DM Manager - 私信自动化引擎 v1.0
 
 import re
 import time
-import json
 import logging
 import hashlib
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Set, Callable, Any
-from collections import defaultdict
+from typing import Dict, List, Optional, Set, Any
 from datetime import datetime, timezone
 
 logger = logging.getLogger(__name__)

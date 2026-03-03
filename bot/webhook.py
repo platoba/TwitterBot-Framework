@@ -4,7 +4,7 @@ Webhook模块 - 实时推送通知到Telegram
 
 import os
 import logging
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, List
 
 import requests
 

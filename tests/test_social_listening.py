@@ -1,7 +1,4 @@
 """Tests for Social Listening Engine"""
-import pytest
-import time
-from datetime import datetime, timezone, timedelta
 from bot.social_listening import (
     SocialListeningEngine, ListeningQuery, ListeningMatch,
     AlertRule, Alert, VolumeTracker, CompetitorTracker,

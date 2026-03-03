@@ -2,7 +2,7 @@
 import os
 import tempfile
 import pytest
-from bot.spaces_manager import Space, SpaceStatus, ParticipantRole, SpacesManager
+from bot.spaces_manager import Space, SpaceStatus, SpacesManager
 
 
 @pytest.fixture

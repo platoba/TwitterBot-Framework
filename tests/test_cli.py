@@ -2,8 +2,6 @@
 Tests for CLI
 """
 
-import pytest
-from unittest.mock import MagicMock, patch
 from bot.cli import build_parser, cmd_generate, cmd_stats, cmd_thread
 
 

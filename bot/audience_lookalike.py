@@ -4,15 +4,13 @@
 支持: 粉丝重叠分析 + 兴趣评分 + 相似度排名 + 自动外展推荐
 """
 
-import hashlib
 import json
 import sqlite3
 import threading
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Dict, List, Optional, Set, Tuple, Any
+from typing import Dict, List, Optional, Set, Any
 
 
 class SimilarityMetric(Enum):

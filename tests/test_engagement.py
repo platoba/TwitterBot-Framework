@@ -2,10 +2,9 @@
 test_engagement.py - 自动互动策略测试
 """
 
-import pytest
 from unittest.mock import patch
 
-from bot.strategies.engagement import EngagementStrategy, EngagementRule
+from bot.strategies.engagement import EngagementRule
 
 
 class TestEngagementRule:

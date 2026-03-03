@@ -6,9 +6,9 @@ Competitor Analysis Engine v1.0
 import json
 import logging
 import statistics
-from collections import Counter, defaultdict
+from collections import Counter
 from dataclasses import dataclass, field
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from typing import Dict, List, Optional, Tuple
 
 from bot.twitter_api import TwitterAPI
@@ -527,7 +527,7 @@ class CompetitorAnalyzer:
     def format_comparison(self, comparison: CompetitorComparison) -> str:
         """格式化对比报告"""
         lines = [
-            f"📊 *竞品分析报告*",
+            "📊 *竞品分析报告*",
             f"🕐 {comparison.generated_at[:16]}\n",
         ]
 
@@ -548,19 +548,19 @@ class CompetitorAnalyzer:
 
         if comparison.benchmarks:
             bm = comparison.benchmarks
-            lines.append(f"\n📏 *行业基准*")
+            lines.append("\n📏 *行业基准*")
             lines.append(f"  粉丝均值: {bm['followers']['avg']:,.0f}")
             lines.append(f"  互动率均值: {bm['engagement_rate']['avg']:.3f}%")
             lines.append(f"  发帖频率均值: {bm['posting_frequency']['avg']:.1f}条/天")
 
             if "my_rank" in bm:
                 rank = bm["my_rank"]
-                lines.append(f"\n🏆 *我的排名*")
+                lines.append("\n🏆 *我的排名*")
                 lines.append(f"  粉丝: #{rank['followers']['rank']}/{rank['followers']['total']}")
                 lines.append(f"  互动: #{rank['engagement']['rank']}/{rank['engagement']['total']}")
 
         if comparison.insights:
-            lines.append(f"\n💡 *洞察*")
+            lines.append("\n💡 *洞察*")
             for insight in comparison.insights:
                 lines.append(f"  {insight}")
 

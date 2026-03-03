@@ -14,11 +14,10 @@ Generates HTML, JSON, and CSV reports with:
 import csv
 import io
 import json
-import time
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime
 from enum import Enum
-from typing import Any, Optional
+from typing import Optional
 
 
 class ReportFormat(str, Enum):

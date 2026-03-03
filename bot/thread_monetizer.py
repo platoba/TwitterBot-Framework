@@ -5,15 +5,12 @@ Detect viral potential → insert optimized CTAs → track conversions → reven
 Turns high-engagement Twitter threads into monetization machines.
 """
 
-import json
 import sqlite3
 import hashlib
-import re
 from datetime import datetime, timezone, timedelta
 from dataclasses import dataclass, field, asdict
 from enum import Enum
 from typing import Optional
-from pathlib import Path
 
 
 class CTAType(Enum):
@@ -269,13 +266,13 @@ class CTAOptimizer:
             ],
             CTAType.PRODUCT: [
                 f"🛒 用这个工具让 {thread_topic} 效率翻倍",
-                f"⚡ 上面的方法论已经产品化了，点击了解",
+                "⚡ 上面的方法论已经产品化了，点击了解",
                 f"🎯 一键解决 {thread_topic} 的所有痛点",
             ],
             CTAType.AFFILIATE: [
                 f"📦 我用的 {thread_topic} 工具（含优惠链接）",
                 f"💰 省时又省钱的 {thread_topic} 推荐",
-                f"🔗 本帖提到的所有工具链接",
+                "🔗 本帖提到的所有工具链接",
             ],
             CTAType.LEAD_MAGNET: [
                 f"📥 免费下载：{thread_topic} 完整Checklist",
@@ -293,14 +290,14 @@ class CTAOptimizer:
                 f"📞 一对一 {thread_topic} 诊断，预约中",
             ],
             CTAType.DONATION: [
-                f"☕ 觉得有帮助？请我喝杯咖啡",
-                f"🙏 创作不易，感谢支持",
-                f"❤️ 如果这个线程帮到你了，考虑打赏支持",
+                "☕ 觉得有帮助？请我喝杯咖啡",
+                "🙏 创作不易，感谢支持",
+                "❤️ 如果这个线程帮到你了，考虑打赏支持",
             ],
             CTAType.LINK: [
                 f"🔗 完整版在这里，更多 {thread_topic} 详情",
-                f"📖 想了解更多？阅读原文",
-                f"👉 详细教程和代码都在这里",
+                "📖 想了解更多？阅读原文",
+                "👉 详细教程和代码都在这里",
             ],
         }
         return templates.get(cta_type, [f"👇 了解更多关于 {thread_topic}"])
@@ -718,8 +715,8 @@ class ThreadMonetizer:
         lines = [
             f"💰 Thread Monetization Report ({days} days)",
             f"{'='*45}",
-            f"",
-            f"📊 Revenue Summary:",
+            "",
+            "📊 Revenue Summary:",
             f"  Total Revenue: ${summary['total_revenue']:,.2f}",
             f"  Daily Average: ${summary['avg_daily_revenue']:,.2f}",
             f"  Total Clicks: {summary['total_clicks']:,}",
@@ -731,8 +728,8 @@ class ThreadMonetizer:
 
         if top_threads:
             lines += [
-                f"",
-                f"🏆 Top Revenue Threads:",
+                "",
+                "🏆 Top Revenue Threads:",
             ]
             for i, t in enumerate(top_threads, 1):
                 lines.append(
@@ -744,7 +741,7 @@ class ThreadMonetizer:
 
         if viral:
             lines += [
-                f"",
+                "",
                 f"🔥 Viral Threads ({len(viral)}):",
             ]
             for v in viral[:5]:

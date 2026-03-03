@@ -3,11 +3,10 @@ Tests for Campaign Manager
 """
 
 import pytest
-import json
 from unittest.mock import MagicMock
 from bot.campaign import (
     Campaign, CampaignManager, CampaignStatus, CampaignGoal,
-    CampaignGoalType, CampaignTweet, CampaignComparison,
+    CampaignGoalType, CampaignTweet,
 )
 from bot.database import Database
 from bot.twitter_api import TwitterAPI

@@ -8,10 +8,10 @@ import json
 import logging
 import re
 import math
-from collections import Counter, defaultdict
+from collections import Counter
 from dataclasses import dataclass, field
-from datetime import datetime, timezone, timedelta
-from typing import Dict, List, Optional, Tuple, Set
+from datetime import datetime
+from typing import Dict, List, Optional, Set
 
 from bot.database import Database
 

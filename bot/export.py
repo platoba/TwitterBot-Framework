@@ -8,7 +8,7 @@ import io
 import json
 import logging
 from datetime import datetime, timezone
-from typing import Dict, List, Optional, Any
+from typing import Dict, List
 
 from bot.database import Database
 
@@ -114,7 +114,7 @@ class ExportEngine:
         """推文历史Markdown报告"""
         tweets = self.db.get_tweet_history(username, limit)
         lines = [
-            f"# Tweet History Report",
+            "# Tweet History Report",
             f"Generated: {self._now()}",
             f"Username: {username or 'all'}",
             f"Total: {len(tweets)}\n",
@@ -151,7 +151,7 @@ class ExportEngine:
         growth = self.db.get_follower_growth(username, 7)
         if growth:
             lines.extend([
-                f"\n## 7-Day Growth",
+                "\n## 7-Day Growth",
                 f"- Current: {growth['current']:,}",
                 f"- Previous: {growth['previous']:,}",
                 f"- Growth: {growth['growth']:+,} ({growth['growth_rate']:+.2f}%)",

@@ -7,7 +7,7 @@ import json
 import sqlite3
 import uuid
 from datetime import datetime, timedelta, timezone
-from typing import Optional, Dict, List, Any
+from typing import Optional, List
 
 
 class GrowthExperiment:

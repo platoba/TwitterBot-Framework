@@ -4,9 +4,7 @@
 """
 
 import logging
-import time
-from datetime import datetime, timezone
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 from bot.twitter_api import TwitterAPI
 from bot.database import Database

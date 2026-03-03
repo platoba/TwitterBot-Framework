@@ -3,14 +3,12 @@ Competitive Benchmarking Engine
 竞品对标: 指标对比 + 内容策略检测 + engagement rate基准 + 增长轨迹 + 内容缺口分析 + 发帖频率
 """
 
-import json
-import math
 import statistics
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from enum import Enum
-from typing import Optional, List, Dict, Any, Tuple
+from typing import Optional, List, Dict, Any
 
 
 class ContentStrategy(str, Enum):

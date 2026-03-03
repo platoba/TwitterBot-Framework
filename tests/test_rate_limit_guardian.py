@@ -7,7 +7,7 @@ import time
 import pytest
 from bot.rate_limit_guardian import (
     RateLimitGuardian, SlidingWindow, TokenBucket, CircuitBreaker,
-    BreakerState, Priority, TWITTER_V2_LIMITS, TWITTER_DAILY_LIMITS,
+    BreakerState, Priority,
 )
 
 TEST_DB = "/tmp/test_rate_limit_guardian.db"

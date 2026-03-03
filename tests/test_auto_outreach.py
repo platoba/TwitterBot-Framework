@@ -2,7 +2,6 @@
 import os
 import json
 import pytest
-from datetime import datetime, timezone
 
 from bot.auto_outreach import (
     ProspectStatus, SequenceStepType, ResponseCategory, OutreachChannel,

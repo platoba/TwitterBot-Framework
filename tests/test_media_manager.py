@@ -1,9 +1,7 @@
 """Tests for Media Manager."""
-import time
-import pytest
 from bot.media_manager import (
     MediaItem, MediaType, MediaStatus, MediaValidator, AltTextGenerator,
-    MediaLibrary, UploadQueue, WatermarkEngine, TWITTER_LIMITS,
+    MediaLibrary, UploadQueue, WatermarkEngine,
 )
 
 

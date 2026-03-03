@@ -2,10 +2,7 @@
 test_database.py - 数据库层测试
 """
 
-import json
-from datetime import datetime, timezone, timedelta
 
-import pytest
 
 
 class TestTweetHistory:

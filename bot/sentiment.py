@@ -6,10 +6,9 @@ Sentiment Analysis Engine v1.0
 
 import logging
 import re
-from collections import Counter, defaultdict
+from collections import Counter
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 from bot.database import Database
 

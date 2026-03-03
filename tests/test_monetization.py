@@ -1,7 +1,6 @@
 """Tests for Monetization Tracker Engine"""
 
 import json
-import pytest
 from bot.monetization import (
     AffiliateLink, RevenueEvent, ClickEvent, RevenueSource, Currency,
     LinkDetector, MonetizationStore, ROICalculator, MonetizationReport,

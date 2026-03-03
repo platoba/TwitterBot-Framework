@@ -7,8 +7,7 @@ from datetime import datetime, timezone, timedelta
 
 import pytest
 from bot.content_recycler import (
-    RecycleStrategy, ContentCategory, TweetRecord, RecycleCandidate,
-    PerformanceScanner, FreshnessChecker, StrategySuggester,
+    RecycleStrategy, ContentCategory, TweetRecord, PerformanceScanner, FreshnessChecker, StrategySuggester,
     RecycleScheduler, ContentRecycler,
 )
 

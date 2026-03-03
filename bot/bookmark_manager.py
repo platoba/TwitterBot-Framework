@@ -19,13 +19,11 @@ import io
 import json
 import re
 import sqlite3
-import time
 import uuid
-from collections import Counter
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Any, Callable, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 
 class BookmarkStatus(str, Enum):

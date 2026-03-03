@@ -1,6 +1,5 @@
 """Tests for Profile Optimizer"""
 
-import pytest
 from bot.profile_optimizer import (
     ProfileData, ProfileGrade, ScoreBreakdown,
     BioAnalyzer, ProfileScorer, ProfileComparator,

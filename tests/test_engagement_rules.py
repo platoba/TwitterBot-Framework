@@ -1,6 +1,5 @@
 """Tests for Engagement Rules Engine."""
 import time
-import pytest
 from bot.engagement_rules import (
     ActionType, ConditionType, RulePriority,
     RuleCondition, RuleAction, EngagementRule,

@@ -1,8 +1,5 @@
 """Tests for AB Testing Engine"""
 import os
-import json
-import math
-import sqlite3
 import tempfile
 import pytest
 from bot.ab_testing import ABTest, ABTestVariant, ABTestEngine

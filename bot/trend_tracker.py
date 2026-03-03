@@ -16,11 +16,11 @@ import logging
 import math
 import sqlite3
 import threading
-from collections import Counter, defaultdict, deque
+from collections import defaultdict, deque
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Dict, List, Optional, Tuple, Set, Deque
+from typing import Dict, List, Optional, Tuple, Deque
 
 logger = logging.getLogger(__name__)
 

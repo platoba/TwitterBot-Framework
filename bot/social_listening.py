@@ -13,7 +13,6 @@ Features:
 
 import re
 import json
-import math
 import sqlite3
 import threading
 import csv
@@ -22,7 +21,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Optional, List, Dict, Any, Tuple, Set, Callable
+from typing import Optional, List, Dict, Tuple, Callable
 
 
 class QueryType(Enum):
@@ -842,7 +841,7 @@ class SocialListeningEngine:
         else:  # text
             lines = [
                 "=" * 50,
-                f"📡 Social Listening Report",
+                "📡 Social Listening Report",
                 f"Query: {query_id or 'All Queries'}",
                 f"Generated: {report_data['generated_at'][:19]}",
                 "=" * 50,

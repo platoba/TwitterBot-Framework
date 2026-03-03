@@ -4,7 +4,7 @@ tests/test_content_calendar.py - 内容日历测试
 
 import os
 import pytest
-from datetime import datetime, timedelta
+from datetime import datetime
 from bot.content_calendar import ContentCalendar, CalendarEntry
 
 TEST_DB = "/tmp/test_content_calendar.db"

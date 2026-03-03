@@ -13,7 +13,6 @@ Provides a modular plugin architecture for extending bot functionality:
 
 import importlib
 import inspect
-import json
 import os
 import time
 import traceback

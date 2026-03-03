@@ -10,10 +10,9 @@ import json
 import sqlite3
 import hashlib
 from datetime import datetime, timezone, timedelta
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
-from collections import defaultdict
 
 
 class Platform(Enum):
@@ -703,7 +702,7 @@ class CrossPostEngine:
             f"{'='*50}",
             f"Total Sources: {stats['total_sources']} | Cross-Posts: {stats['total_crossposts']}",
             f"Published: {stats['published']} | Failed: {stats['failed']}",
-            f"",
+            "",
         ]
 
         if not perf:
@@ -722,7 +721,7 @@ class CrossPostEngine:
                 f"   Posts: {data['post_count']} | Impressions: {data['impressions']:,}",
                 f"   Likes: {data['likes']:,} | Shares: {data['shares']:,} | Comments: {data['comments']:,}",
                 f"   Clicks: {data['clicks']:,} | Engagement: {data['avg_engagement']}%",
-                f"",
+                "",
             ]
 
         # Best platform
@@ -740,27 +739,27 @@ class CrossPostEngine:
         failed = self.store.get_posts_by_status(PostStatus.FAILED)
 
         lines = [
-            f"🔄 Cross-Post Engine Report",
+            "🔄 Cross-Post Engine Report",
             f"{'='*45}",
-            f"",
-            f"📈 Overview:",
+            "",
+            "📈 Overview:",
             f"  Sources: {stats['total_sources']}",
             f"  Cross-Posts: {stats['total_crossposts']}",
             f"  Published: {stats['published']}",
             f"  Failed: {stats['failed']}",
             f"  Platforms: {stats['platforms_used']}",
-            f"",
+            "",
             f"📝 Pending: {len(pending)} drafts",
             f"📅 Scheduled: {len(scheduled)}",
         ]
 
         if failed:
-            lines += [f"", f"❌ Recent Failures:"]
+            lines += ["", "❌ Recent Failures:"]
             for f_post in failed[:5]:
                 lines.append(f"  {f_post.platform.value}: {f_post.error or 'Unknown error'}")
 
         lines += [
-            f"",
+            "",
             f"🎯 Enabled Platforms: {', '.join(p.value for p in self.get_enabled_platforms())}",
         ]
 

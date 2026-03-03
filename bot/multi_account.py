@@ -13,9 +13,8 @@ Features:
 
 import time
 import hashlib
-import json
 import sqlite3
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 

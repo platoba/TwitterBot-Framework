@@ -1,6 +1,5 @@
 """Tests for Multi-Account Manager."""
 import time
-import pytest
 from bot.multi_account import (
     TwitterAccount, AccountCredentials, AccountStatus, AccountRole,
     RateLimitState, AccountHealth, MultiAccountManager,

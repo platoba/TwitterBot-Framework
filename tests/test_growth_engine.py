@@ -1,6 +1,5 @@
 """Tests for Growth Engine"""
 import os
-import json
 import tempfile
 import pytest
 from bot.growth_engine import GrowthExperiment, GrowthEngine

@@ -4,7 +4,7 @@ Tests for Competitor Analysis Engine
 
 import pytest
 import json
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 from bot.competitor import (
     CompetitorAnalyzer, CompetitorProfile, CompetitorComparison,
 )
@@ -357,7 +357,6 @@ class TestGrowthHistory:
         )
         analyzer._ensure_table()
         # Insert directly into competitors table (FK constraint requires it)
-        import json
         conn = db._get_conn()
         conn.execute(
             "INSERT OR REPLACE INTO competitors (username, user_id, profile_data) VALUES (?, ?, ?)",

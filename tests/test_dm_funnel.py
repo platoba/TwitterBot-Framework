@@ -1,7 +1,6 @@
 """Tests for DM Funnel Engine"""
 
 import json
-import pytest
 from bot.dm_funnel import (
     FunnelStep, StepType, Trigger, TriggerType, Funnel, FunnelStatus,
     UserState, ConditionOp, TemplateEngine, ConditionEvaluator,

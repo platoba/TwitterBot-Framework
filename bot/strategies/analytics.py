@@ -5,8 +5,8 @@
 
 import logging
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
-from typing import Dict, List, Optional, Tuple
+from datetime import datetime
+from typing import Dict, List, Optional
 
 from bot.twitter_api import TwitterAPI
 from bot.database import Database

@@ -10,12 +10,12 @@ import sqlite3
 import string
 import threading
 import random
-from collections import Counter, defaultdict
+from collections import Counter
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from enum import Enum
-from typing import Dict, List, Optional, Set, Tuple, Any
-from urllib.parse import urlencode, urlparse, parse_qs, urlunparse, urljoin
+from typing import Dict, List, Optional, Tuple, Any
+from urllib.parse import urlencode, urlparse, parse_qs, urlunparse
 
 
 class LinkStatus(Enum):

@@ -1,6 +1,5 @@
 """Tests for bot/thread_strategy.py — Strategic Thread Publishing Engine"""
 
-import json
 import pytest
 from bot.thread_strategy import (
     ThreadStrategy, ThreadPlan, ThreadTweet, ThreadTemplate, ThreadStatus,

@@ -4,12 +4,11 @@ Thread Analytics Engine
 """
 
 import json
-import math
 import statistics
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Optional, List, Dict, Any, Tuple
+from typing import Optional, List, Dict, Any
 
 
 class ThreadFormat(str, Enum):

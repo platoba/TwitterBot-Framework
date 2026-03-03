@@ -4,7 +4,7 @@ import json
 import os
 import tempfile
 import pytest
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
 
 from bot.audience_insights import (
     AudienceSegment, InterestCategory, INTEREST_KEYWORDS,

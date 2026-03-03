@@ -1,10 +1,10 @@
 """Tests for bot/lists_manager.py"""
 
-import time
 import pytest
-from bot.lists_manager import ListsManager, ListMember, ListConfig, ListStats
+from bot.lists_manager import ListsManager, ListMember, ListConfig
 from bot.database import Database
-import tempfile, os
+import tempfile
+import os
 
 
 @pytest.fixture

@@ -3,10 +3,9 @@ test_twitter_api.py - Twitter API客户端测试
 """
 
 import time
-import pytest
 from unittest.mock import patch, MagicMock
 
-from bot.twitter_api import TwitterAPI, RateLimiter
+from bot.twitter_api import TwitterAPI
 
 
 class TestRateLimiter:

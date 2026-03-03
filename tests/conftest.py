@@ -4,8 +4,6 @@ conftest.py - 测试公共fixture
 
 import os
 import sys
-import sqlite3
-import tempfile
 import pytest
 
 # 确保项目根目录在path
@@ -16,7 +14,7 @@ from bot.twitter_api import TwitterAPI, RateLimiter
 from bot.content_generator import ContentGenerator
 from bot.webhook import TelegramWebhook
 from bot.strategies.analytics import AnalyticsStrategy
-from bot.strategies.engagement import EngagementStrategy, EngagementRule
+from bot.strategies.engagement import EngagementStrategy
 from bot.strategies.monitor import MonitorStrategy
 from bot.strategies.scheduler import SchedulerStrategy
 

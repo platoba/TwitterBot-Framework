@@ -3,13 +3,11 @@ Profile Optimizer - AI驱动的Twitter资料优化器 v1.0
 Bio评分 + 关键词密度 + CTA检测 + 竞品对比 + 优化建议
 """
 
-import json
 import logging
 import re
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
 from enum import Enum
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Any
 
 logger = logging.getLogger(__name__)
 

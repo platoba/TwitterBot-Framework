@@ -3,7 +3,6 @@ Tests for Trend Tracker v1.0
 """
 import json
 import tempfile
-from datetime import datetime, timezone, timedelta
 
 import pytest
 from bot.trend_tracker import (

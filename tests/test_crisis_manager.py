@@ -1,9 +1,6 @@
 """Tests for crisis_manager.py — 品牌危机检测与响应引擎"""
-import os
-import json
-import tempfile
 import pytest
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 
 from bot.crisis_manager import (
     CrisisSeverity, CrisisStatus, EscalationLevel, ResponseTone,

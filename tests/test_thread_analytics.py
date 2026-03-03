@@ -10,7 +10,6 @@ from bot.thread_analytics import (
     ThreadRecord,
     TweetMetrics,
     ThreadFormat,
-    EngagementTrend,
 )
 
 

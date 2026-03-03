@@ -15,11 +15,10 @@ import json
 import math
 import sqlite3
 import threading
-from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Optional, List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple
 
 
 class CostCategory(Enum):

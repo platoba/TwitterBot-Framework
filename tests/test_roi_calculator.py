@@ -1,9 +1,8 @@
 """Tests for roi_calculator.py — 社交媒体ROI计算器"""
 import os
 import json
-import tempfile
 import pytest
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 
 from bot.roi_calculator import (
     CostCategory, AttributionModel, ConversionType, ROIRating,

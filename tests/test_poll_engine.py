@@ -1,6 +1,5 @@
 """Tests for Poll Engine"""
 import os
-import math
 import tempfile
 import pytest
 from bot.poll_engine import PollOption, Poll, PollEngine

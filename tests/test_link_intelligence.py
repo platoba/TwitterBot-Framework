@@ -1,14 +1,12 @@
 """Tests for link_intelligence module"""
 
 import json
-import os
-import tempfile
 import pytest
 
 from bot.link_intelligence import (
-    ClickEvent, LinkAnalytics, LinkIntelligence, LinkStatus,
+    ClickEvent, LinkIntelligence, LinkStatus,
     LinkStore, ShortCodeGenerator, TrackedLink, UTMBuilder,
-    UTMMedium, UTMParams, UTMSource,
+    UTMParams,
 )
 
 

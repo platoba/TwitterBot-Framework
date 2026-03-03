@@ -17,8 +17,8 @@ import json
 import sqlite3
 import uuid
 import math
-from datetime import datetime, timedelta, timezone
-from typing import Optional, List, Dict, Any, Tuple
+from datetime import datetime, timezone
+from typing import Optional, List, Dict, Any
 
 
 class PollOption:

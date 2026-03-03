@@ -5,7 +5,6 @@ Tests for Viral Score Predictor
 import pytest
 from bot.viral_predictor import (
     ViralPredictor, ViralPrediction, ContentFeatures,
-    FEATURE_WEIGHTS, CTA_PATTERNS,
 )
 from bot.database import Database
 

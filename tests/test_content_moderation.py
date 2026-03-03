@@ -1,8 +1,5 @@
 """Tests for content_moderation module"""
 
-import json
-import os
-import tempfile
 import pytest
 
 from bot.content_moderation import (

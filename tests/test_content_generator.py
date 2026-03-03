@@ -2,8 +2,7 @@
 test_content_generator.py - 内容生成器测试
 """
 
-import pytest
-from bot.content_generator import ContentGenerator, DEFAULT_TEMPLATES
+from bot.content_generator import ContentGenerator
 
 
 class TestContentGeneratorInit:

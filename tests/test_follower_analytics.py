@@ -1,10 +1,10 @@
 """Tests for bot/follower_analytics.py"""
 
-import time
 import pytest
 from bot.follower_analytics import FollowerAnalytics, FollowerRecord, GrowthReport
 from bot.database import Database
-import tempfile, os
+import tempfile
+import os
 
 
 @pytest.fixture

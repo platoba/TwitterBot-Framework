@@ -9,7 +9,7 @@ import uuid
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Dict, List, Optional, Callable
+from typing import Dict, List, Optional
 
 from bot.database import Database
 from bot.twitter_api import TwitterAPI
@@ -693,7 +693,7 @@ class CampaignManager:
                 lines.append(f"    {goal.current_value:,} / {goal.target_value:,}")
             lines.append("")
 
-        lines.append(f"📊 *Performance*")
+        lines.append("📊 *Performance*")
         lines.append(f"  Tweets: {campaign.sent_tweets}/{campaign.total_tweets}")
         lines.append(f"  Impressions: {campaign.total_impressions:,}")
         lines.append(f"  Engagement: {campaign.total_engagement:,}")

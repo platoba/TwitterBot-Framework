@@ -1,8 +1,7 @@
 """Tests for Audience Segmentation Engine"""
 import pytest
 from bot.audience_segment import (
-    AudienceSegmenter, AudienceProfile, SegmentRule, Segment,
-    EngagementTier, InteractionType, RuleOperator,
+    AudienceSegmenter, AudienceProfile, SegmentRule, EngagementTier, InteractionType, RuleOperator,
 )
 
 

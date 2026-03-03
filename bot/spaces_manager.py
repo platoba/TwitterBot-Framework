@@ -12,12 +12,11 @@ Features:
 - SQLite persistence for all space data
 """
 
-import json
 import sqlite3
 import uuid
 from datetime import datetime, timedelta, timezone
 from enum import Enum
-from typing import Optional, List, Dict, Any
+from typing import Optional, List
 
 
 class SpaceStatus(Enum):

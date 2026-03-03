@@ -12,12 +12,10 @@ Features:
 - SQLite persistence
 """
 
-import json
 import sqlite3
 import uuid
-import re
 from datetime import datetime, timedelta, timezone
-from typing import Optional, List, Dict, Any, Tuple
+from typing import Optional, List, Dict, Tuple
 
 
 class QuoteStyle:

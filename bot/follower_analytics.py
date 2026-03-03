@@ -10,13 +10,11 @@ Features:
 """
 
 import time
-import sqlite3
 import re
 import logging
-from typing import Optional, List, Dict, Tuple, Set
+from typing import List, Dict
 from dataclasses import dataclass, asdict
 from collections import Counter
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 

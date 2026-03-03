@@ -14,7 +14,7 @@ import re
 import logging
 from typing import Optional, List, Dict, Tuple
 from dataclasses import dataclass, asdict
-from collections import Counter, defaultdict
+from collections import defaultdict
 from datetime import datetime
 
 logger = logging.getLogger(__name__)

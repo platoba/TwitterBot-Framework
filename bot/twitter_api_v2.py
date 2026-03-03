@@ -11,7 +11,6 @@ Implements modern Twitter API v2 endpoints:
 """
 
 import hashlib
-import hmac
 import json
 import secrets
 import time

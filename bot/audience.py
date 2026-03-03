@@ -4,10 +4,9 @@ Audience Analyzer - 受众分析引擎 v3.0
 """
 
 import logging
-import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from typing import Dict, List, Optional, Tuple
 
 from bot.twitter_api import TwitterAPI

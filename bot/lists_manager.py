@@ -9,11 +9,9 @@ Features:
 """
 
 import time
-import sqlite3
 import logging
-from typing import Optional, List, Dict, Tuple
+from typing import Optional, List, Dict
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -117,7 +115,6 @@ class ListsManager:
         self._ensure_tables()
 
     def _ensure_tables(self):
-        import json
         conn = self.db._get_conn()
         conn.executescript(self.SCHEMA)
         conn.commit()

@@ -4,10 +4,8 @@ tests/test_workflow_engine.py - 工作流引擎测试
 
 import os
 import pytest
-import json
 from bot.workflow_engine import (
     WorkflowEngine, Workflow, WorkflowNode, ConditionEvaluator,
-    NodeType, ActionType, ConditionOp, WorkflowStatus, RunStatus,
 )
 
 TEST_DB = "/tmp/test_workflow_engine.db"

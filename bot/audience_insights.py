@@ -12,15 +12,14 @@ Features:
 """
 
 import json
-import math
 import re
 import sqlite3
 import threading
-from collections import Counter, defaultdict
+from collections import defaultdict
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Optional, List, Dict, Any, Tuple, Set
+from typing import Optional, List, Dict, Any, Tuple
 
 
 class AudienceSegment(Enum):

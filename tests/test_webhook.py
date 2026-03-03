@@ -2,7 +2,6 @@
 test_webhook.py - Telegram Webhook通知测试
 """
 
-import pytest
 from unittest.mock import patch, MagicMock
 
 from bot.webhook import TelegramWebhook

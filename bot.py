@@ -7,9 +7,7 @@ TwitterBot Framework v3.0 — Twitter/X全栈自动化工具箱
 import os
 import sys
 import time
-import json
 import logging
-from datetime import datetime, timezone
 
 from bot.twitter_api import TwitterAPI
 from bot.database import Database
@@ -260,7 +258,7 @@ class TwitterBot:
         result = self.analytics.best_posting_times(username)
         if not result["best_hours"]:
             return self._send(chat_id, "📊 数据不足，需要更多推文历史", msg_id)
-        lines = [f"🕐 *最佳发帖时间*\n"]
+        lines = ["🕐 *最佳发帖时间*\n"]
         for h in result["best_hours"][:5]:
             lines.append(f"  {h['hour']:02d}:00 UTC — ⚡{h['avg_engagement']:.1f} ({h['tweet_count']}条)")
         self._send(chat_id, "\n".join(lines), msg_id)
@@ -445,7 +443,7 @@ class TwitterBot:
 
 def main():
     print(f"\n{'='*50}")
-    print(f"  TwitterBot Framework v3.0")
+    print("  TwitterBot Framework v3.0")
     print(f"{'='*50}")
     bot = TwitterBot()
     try:

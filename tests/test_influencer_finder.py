@@ -2,7 +2,6 @@
 Tests for Influencer Finder v1.0
 """
 import json
-import os
 import tempfile
 import pytest
 from bot.influencer_finder import (

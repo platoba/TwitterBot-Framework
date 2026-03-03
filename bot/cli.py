@@ -4,10 +4,7 @@ TwitterBot Framework CLI v1.0
 """
 
 import argparse
-import json
 import os
-import sys
-from datetime import datetime, timezone
 
 from bot.twitter_api import TwitterAPI
 from bot.database import Database
@@ -113,7 +110,7 @@ def cmd_thread(args):
 
     validation = composer.validate(thread)
     if not validation["valid"]:
-        print(f"\n⚠️ Issues:")
+        print("\n⚠️ Issues:")
         for issue in validation["issues"]:
             print(f"  - {issue}")
 

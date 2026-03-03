@@ -7,8 +7,7 @@ import os
 import time
 import logging
 import threading
-from datetime import datetime, timezone
-from typing import Optional, Dict, Any, List, Tuple
+from typing import Optional, Dict, Any, Tuple
 
 import requests
 

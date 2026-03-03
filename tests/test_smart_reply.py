@@ -2,7 +2,7 @@
 import pytest
 from bot.smart_reply import (
     SmartReplyEngine, ReplyTemplate, ReplyMatcher, ConversationTracker,
-    MatchType, SentimentFilter, MatchResult,
+    MatchType, SentimentFilter,
 )
 
 

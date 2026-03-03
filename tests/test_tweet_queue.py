@@ -1,7 +1,4 @@
 """Tests for Tweet Queue"""
-import os
-import tempfile
-import time
 import pytest
 from bot.tweet_queue import (
     Priority, QueueItemStatus, QueueItem, DeduplicationEngine, TweetQueue,

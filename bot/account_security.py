@@ -10,7 +10,7 @@ import hashlib
 import json
 import re
 from datetime import datetime, timezone, timedelta
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
 from collections import defaultdict
@@ -834,11 +834,11 @@ class AccountSecurityMonitor:
         rl_suggestions = self.rate_forensics.suggest_optimizations()
 
         lines = [
-            f"🛡️ Account Security Report",
+            "🛡️ Account Security Report",
             f"{'='*45}",
-            f"",
+            "",
             f"📊 Security Score: {security['score']}/100 ({security['grade']})",
-            f"",
+            "",
             f"🔑 API Keys: {security['key_count']} registered",
         ]
 
@@ -850,7 +850,7 @@ class AccountSecurityMonitor:
             lines.append("  ✅ All keys healthy")
 
         lines += [
-            f"",
+            "",
             f"🔐 Login Activity ({login_stats['period_days']} days):",
             f"  Total: {login_stats['total_logins']} ({login_stats['successful']} ok, {login_stats['failed']} failed)",
             f"  Unique IPs: {login_stats['unique_ips']}",
@@ -860,7 +860,7 @@ class AccountSecurityMonitor:
         ]
 
         if unresolved:
-            lines += [f"", f"⚠️ Unresolved Alerts ({len(unresolved)}):"]
+            lines += ["", f"⚠️ Unresolved Alerts ({len(unresolved)}):"]
             for alert in unresolved[:5]:
                 emoji = {
                     ThreatLevel.CRITICAL: "🔴",
@@ -870,15 +870,15 @@ class AccountSecurityMonitor:
                 }.get(alert.threat_level, "⚪")
                 lines.append(f"  {emoji} [{alert.alert_type.value}] {alert.title}")
         else:
-            lines.append(f"\n✅ No unresolved security alerts")
+            lines.append("\n✅ No unresolved security alerts")
 
         if rl_suggestions:
-            lines += [f"", f"📡 Rate Limit Status:"]
+            lines += ["", "📡 Rate Limit Status:"]
             for s in rl_suggestions:
                 lines.append(f"  {s}")
 
         if security["issues"]:
-            lines += [f"", f"📋 Action Items:"]
+            lines += ["", "📋 Action Items:"]
             for issue in security["issues"]:
                 lines.append(f"  {issue}")
 

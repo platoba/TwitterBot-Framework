@@ -3,7 +3,6 @@ Tests for Sentiment Analysis Engine
 """
 
 import pytest
-from unittest.mock import MagicMock
 from bot.sentiment import (
     SentimentAnalyzer, SentimentResult, SentimentSummary,
     SentimentLabel, POSITIVE_WORDS, NEGATIVE_WORDS,

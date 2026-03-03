@@ -11,12 +11,11 @@ Features:
 """
 
 import re
-import time
 import json
 import sqlite3
 import threading
 from collections import Counter
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 from enum import Enum
 from typing import Optional, List, Dict, Any, Tuple, Set
@@ -254,7 +253,7 @@ class SpamScorer:
                 violations.append(Violation(
                     type=ViolationType.DUPLICATE_CONTENT,
                     severity=Severity.LOW,
-                    description=f"Repetitive character pattern detected",
+                    description="Repetitive character pattern detected",
                     score_impact=impact,
                 ))
 

@@ -2,10 +2,8 @@
 test_monitor.py - 监控策略测试
 """
 
-import pytest
 from unittest.mock import patch
 
-from bot.strategies.monitor import MonitorStrategy
 
 
 class TestMonitorManagement:

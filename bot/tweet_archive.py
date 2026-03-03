@@ -17,12 +17,11 @@ import threading
 import csv
 import io
 import hashlib
-import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone, timedelta
 from enum import Enum
-from typing import Optional, List, Dict, Any, Tuple, Set
+from typing import Optional, List, Dict, Tuple, Set
 
 
 class ArchiveStatus(Enum):

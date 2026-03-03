@@ -4,7 +4,8 @@ import time
 import pytest
 from bot.reputation_monitor import ReputationMonitor, Mention, ReputationReport
 from bot.database import Database
-import tempfile, os
+import tempfile
+import os
 
 
 @pytest.fixture

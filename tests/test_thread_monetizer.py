@@ -1,10 +1,6 @@
 """Tests for Thread Monetizer module."""
 
-import os
-import json
-import tempfile
 import pytest
-from datetime import datetime, timezone, timedelta
 
 from bot.thread_monetizer import (
     CTAType, PlacementPosition, ViralStage, CTAConfig, ConversionEvent,

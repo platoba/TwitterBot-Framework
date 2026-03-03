@@ -13,10 +13,8 @@ Features:
 - Media usage analytics
 """
 
-import os
 import time
 import json
-import hashlib
 import sqlite3
 from dataclasses import dataclass, field
 from enum import Enum

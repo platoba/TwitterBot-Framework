@@ -3,7 +3,8 @@
 import pytest
 from bot.content_optimizer import ContentOptimizer, ContentInsight, TimeSlot, HashtagROI
 from bot.database import Database
-import tempfile, os, time
+import tempfile
+import os
 
 
 @pytest.fixture

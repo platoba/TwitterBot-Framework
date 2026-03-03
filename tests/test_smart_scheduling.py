@@ -11,7 +11,6 @@ from bot.smart_scheduling import (
     ContentType,
     ScheduleEntry,
     TimeSlot,
-    DayOfWeek,
 )
 
 

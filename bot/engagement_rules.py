@@ -17,7 +17,7 @@ import re
 import sqlite3
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, Callable
+from typing import Optional
 
 
 class ActionType(Enum):

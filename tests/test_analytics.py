@@ -2,10 +2,8 @@
 test_analytics.py - 分析策略引擎测试
 """
 
-import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
-from bot.strategies.analytics import AnalyticsStrategy
 
 
 class TestEngagementRate:

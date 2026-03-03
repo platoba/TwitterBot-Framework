@@ -3,10 +3,9 @@ test_scheduler.py - 调度器策略测试
 """
 
 import pytest
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from unittest.mock import patch
 
-from bot.strategies.scheduler import SchedulerStrategy
 
 
 class TestScheduleTweet:

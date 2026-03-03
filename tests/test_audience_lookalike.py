@@ -1,13 +1,11 @@
 """Tests for audience_lookalike module"""
 
 import json
-import os
-import tempfile
 import pytest
 
 from bot.audience_lookalike import (
     AudienceLookalike, AudienceSegment, InterestExtractor,
-    LookalikeResult, LookalikeStore, OverlapAnalysis,
+    LookalikeStore, OverlapAnalysis,
     SimilarityCalculator, SimilarityMetric,
     UserProfile,
 )
